@@ -38,7 +38,6 @@ export const View4 = styled.View`
   width: 15px;
   height: 15px;
   background: ${theme.colors.dark};
-  border-radius: 0px 5px 5px 5px;
   border-top-left-radius: 0px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;

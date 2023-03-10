@@ -16,4 +16,5 @@ export const TextButton = styled.Text`
   text-transform: uppercase;
   font-size: ${theme.font.sizes.xsmall};
   font-family: 'Poppins_900Black';
+  
 `;
