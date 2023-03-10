@@ -8,3 +8,14 @@ export const Container = styled.View`
   flex-direction: row;
   justify-content: space-between;
 `;
+export const LogoTextTitle = styled.TouchableOpacity`
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+`;
+export const TextTitle = styled.Text`
+  font-family: 'PassionOne_700Bold';
+  font-size: 22px;
+  font-size: ${theme.font.sizes.medium};
+  color: ${theme.colors.white};
+`;

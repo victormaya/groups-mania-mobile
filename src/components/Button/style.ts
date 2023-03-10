@@ -15,4 +15,5 @@ export const ButtonTouchableOpacityGhost = styled.TouchableOpacity`
 export const TextButton = styled.Text`
   font-weight: bold;
   text-transform: uppercase;
+  font-size: ${theme.font.sizes.xsmall};
 `;
