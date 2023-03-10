@@ -13,7 +13,7 @@ export const ButtonTouchableOpacityGhost = styled.TouchableOpacity`
   border-radius: ${theme.border.radius};
 `;
 export const TextButton = styled.Text`
-  font-weight: bold;
   text-transform: uppercase;
   font-size: ${theme.font.sizes.xsmall};
+  font-family: 'Poppins_900Black';
 `;

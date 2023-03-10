@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@expo-google-fonts/passion-one": "^0.2.3",
+    "@expo-google-fonts/poppins": "^0.2.3",
     "@expo/webpack-config": "^18.0.1",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",

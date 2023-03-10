@@ -15,7 +15,6 @@ export const LogoTextTitle = styled.TouchableOpacity`
 `;
 export const TextTitle = styled.Text`
   font-family: 'PassionOne_700Bold';
-  font-size: 22px;
-  font-size: ${theme.font.sizes.medium};
+  font-size: ${theme.font.sizes.large};
   color: ${theme.colors.white};
 `;
