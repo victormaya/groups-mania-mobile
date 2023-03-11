@@ -6,31 +6,24 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import DefaultLayout from "./src/layouts/DefaultLayout/index";
 import { CategoryContextProvider } from "./src/context/CategoryContext";
-
-function HomeScreen() {
-  return (
-    <DefaultLayout>
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Home Screen</Text>
-      </View>
-    </DefaultLayout>
-  );
-}
+import Home from "./src/pages/Home";
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <CategoryContextProvider>
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="Home"
-            component={HomeScreen}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <DefaultLayout>
+        <NavigationContainer>
+          <Stack.Navigator initialRouteName="Home">
+            <Stack.Screen
+              options={{ headerShown: false }}
+              name="Home"
+              component={Home}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </DefaultLayout>
     </CategoryContextProvider>
   );
 }

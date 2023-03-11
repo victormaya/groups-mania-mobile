@@ -10,7 +10,7 @@ export const ContainerCategories = styled.TouchableOpacity`
   min-height: 155px;
   max-height: 40%;
   position: absolute;
-  top: 102px;
+  top: 101px;
   z-index: 10;
   width: 100%;
   background: ${theme.colors.dark};
@@ -22,7 +22,7 @@ export const CategoriesText = styled.Text`
   text-transform: uppercase;
 `;
 export const Ball = styled.View`
-  background: ${theme.colors.black};
+  background: ${theme.colors.yellow};
   width: 35px;
   height: 35px;
   position: absolute;
@@ -39,7 +39,7 @@ export const Icon = styled.View<{ opened: boolean }>`
   border-right-width: 10px;
   border-right-color: transparent;
   border-bottom-width: 14px;
-  border-bottom-color: ${theme.colors.yellow};
+  border-bottom-color: ${theme.colors.black};
   position: relative;
   top: ${(props) => (props.opened ? "2px" : "-2px")};
   transform: ${(props) => props.opened && "rotate(180deg)"};
