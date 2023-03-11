@@ -7,7 +7,13 @@ export const ContainerCategories = styled.TouchableOpacity`
   border-bottom-color: ${theme.colors.yellow};
   border-bottom-width: 1px;
   position: relative;
-  max-height: 75%;
+  min-height: 155px;
+  max-height: 40%;
+  position: absolute;
+  top: 102px;
+  z-index: 10;
+  width: 100%;
+  background: ${theme.colors.dark};
 `;
 export const CategoriesText = styled.Text`
   font-family: "Poppins_900Black";
@@ -35,12 +41,11 @@ export const Icon = styled.View<{ opened: boolean }>`
   border-bottom-width: 14px;
   border-bottom-color: ${theme.colors.yellow};
   position: relative;
-  transition-duration: 3s;
-  transition-timing-function: ease-in-out;
-
   top: ${(props) => (props.opened ? "2px" : "-2px")};
   transform: ${(props) => props.opened && "rotate(180deg)"};
 `;
 export const FlatListCategory = styled.FlatList`
   width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 `;

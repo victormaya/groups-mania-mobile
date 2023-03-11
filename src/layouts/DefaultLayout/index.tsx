@@ -1,12 +1,19 @@
 import Header from "../../components/Header";
 import Categories from "../../components/Categories";
-import { ReactElement } from "react";
+import { ReactElement, useContext } from "react";
 import { Container } from "./styles";
 import { useFonts, PassionOne_700Bold } from "@expo-google-fonts/passion-one";
 import { Poppins_900Black } from "@expo-google-fonts/poppins";
-import { CategoryContextProvider } from "../../context/CategoryContext";
+import {
+  CategoryContext,
+  CategoryContextProvider,
+} from "../../context/CategoryContext";
 
 function DefaultLayout({ children }: { children: ReactElement<any, any> }) {
+  const { categories } = useContext(CategoryContext);
+  console.log("🚀 ~ file: index.tsx:14 ~ DefaultLayout ~ categories:", categories)
+
+
   let [fontsLoaded] = useFonts({
     PassionOne_700Bold,
     Poppins_900Black,
@@ -15,13 +22,11 @@ function DefaultLayout({ children }: { children: ReactElement<any, any> }) {
     return null;
   }
   return (
-    <CategoryContextProvider>
-      <Container>
-        <Header />
-        <Categories />
-        {children}
-      </Container>
-    </CategoryContextProvider>
+    <Container>
+      <Header />
+      <Categories data={categories} />
+      {children}
+    </Container>
   );
 }
 

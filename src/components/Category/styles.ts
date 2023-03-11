@@ -5,7 +5,7 @@ export const ContainerCategory = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
   gap: 5px;
-  margin-bottom: 5px;;
+  margin-bottom: 15px;
 `;
 
 export const IconCategory = styled.View`

@@ -1,6 +1,5 @@
-import { useContext, useState } from "react";
-import { FlatList } from "react-native";
-import { CategoryContext } from "../../context/CategoryContext";
+import { useState } from "react";
+import { ICategory } from "../../models/category";
 import Category from "../Category";
 import {
   ContainerCategories,
@@ -10,15 +9,15 @@ import {
   FlatListCategory,
 } from "./styles";
 
-function Categories() {
+function Categories({data}: {data: ICategory[]}) {
   const [opened, setOpened] = useState(false);
-  const { categories } = useContext(CategoryContext);
+
   return (
     <ContainerCategories onPress={() => setOpened(!opened)}>
       <CategoriesText>Categorias</CategoriesText>
-      {opened && (
+      {opened && data.length && (
         <FlatListCategory
-          data={categories}
+          data={data}
           renderItem={({ item }: any) => (
             <Category
               name={item.name}

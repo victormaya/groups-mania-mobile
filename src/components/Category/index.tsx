@@ -3,7 +3,6 @@ import { ICategory } from "../../models/category";
 import { SvgUri } from "react-native-svg";
 
 function Category({ name, icon, value }: ICategory) {
-  console.log(`https://un4tel6z.directus.app/assets/${icon}`);
   // value chama url
   return (
     <ContainerCategory>

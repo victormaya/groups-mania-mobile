@@ -5,6 +5,7 @@ import { View, Text, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import DefaultLayout from "./src/layouts/DefaultLayout/index";
+import { CategoryContextProvider } from "./src/context/CategoryContext";
 
 function HomeScreen() {
   return (
@@ -20,15 +21,17 @@ const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="Home"
-          component={HomeScreen}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <CategoryContextProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Home"
+            component={HomeScreen}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </CategoryContextProvider>
   );
 }
 
