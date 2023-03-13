@@ -5,6 +5,6 @@ export const Title = styled.Text`
     color: ${theme.colors.yellow};
     font-family: 'PassionOne_700Bold';
     font-size: ${theme.font.sizes.medium};
-
+    margin-bottom: 15px;
 `;
 

@@ -1,11 +1,11 @@
 import React from "react";
-import { ButtonTouchableOpacity, ButtonTouchableOpacityGhost, TextButton } from "./style";
+import { ButtonTouchableOpacity, ButtonTouchableOpacityGhost, TextButton, TextButtonGhost } from "./style";
 
 function Button({ ghost, label }: { ghost?: boolean; label: string }) {
   if (ghost)
     return (
       <ButtonTouchableOpacityGhost>
-        <TextButton>{label}</TextButton>
+        <TextButtonGhost>{label}</TextButtonGhost>
       </ButtonTouchableOpacityGhost>
     );
   return (

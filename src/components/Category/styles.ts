@@ -19,6 +19,6 @@ export const IconCategory = styled.View`
 export const TextCategory = styled.Text`
   text-transform: uppercase;
   font-size: ${theme.font.sizes.small};
-  font-family: "Poppins_900Black";
+  font-family: "Poppins_700Bold";
   color: ${theme.colors.white};
 `;

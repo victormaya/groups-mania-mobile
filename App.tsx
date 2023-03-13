@@ -7,24 +7,27 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import DefaultLayout from "./src/layouts/DefaultLayout/index";
 import { CategoryContextProvider } from "./src/context/CategoryContext";
 import Home from "./src/pages/Home";
+import { GroupContextProvider } from "./src/context/GroupContext";
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-    <CategoryContextProvider>
-      <DefaultLayout>
-        <NavigationContainer>
-          <Stack.Navigator initialRouteName="Home">
-            <Stack.Screen
-              options={{ headerShown: false }}
-              name="Home"
-              component={Home}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </DefaultLayout>
-    </CategoryContextProvider>
+    <GroupContextProvider>
+      <CategoryContextProvider>
+        <DefaultLayout>
+          <NavigationContainer>
+            <Stack.Navigator initialRouteName="Home">
+              <Stack.Screen
+                options={{ headerShown: false }}
+                name="Home"
+                component={Home}
+              />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </DefaultLayout>
+      </CategoryContextProvider>
+    </GroupContextProvider>
   );
 }
 

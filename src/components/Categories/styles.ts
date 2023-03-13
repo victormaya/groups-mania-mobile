@@ -16,7 +16,7 @@ export const ContainerCategories = styled.TouchableOpacity`
   background: ${theme.colors.dark};
 `;
 export const CategoriesText = styled.Text`
-  font-family: "Poppins_900Black";
+  font-family: "Poppins_700Bold";
   color: ${theme.colors.white};
   font-size: ${theme.font.sizes.small};
   text-transform: uppercase;

@@ -12,7 +12,7 @@ const Header: React.FC = () => {
         <Logo />
         <TextTitle>GroupasMania</TextTitle>
       </LogoTextTitle>
-      <Button label="enviar grupo" ghost />
+      <Button label="enviar grupo"  />
     </Container>
   );
 };
